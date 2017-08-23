@@ -23,6 +23,9 @@ class KnownVirustotal(Signature):
     authors = ["Michael Boman", "nex", "Optiv", "Kevin Ross"]
     minimum = "2.0"
 
+    # We already have a different VirusTotal module, this is duplicated.
+    enabled = False
+
     def on_complete(self):
         results = self.get_virustotal()
         if results.get("positives"):

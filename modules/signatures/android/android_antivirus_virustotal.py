@@ -12,6 +12,9 @@ class KnownVirustotal(Signature):
     categories = ["antivirus"]
     authors = ["Check Point Software Technologies LTD"]
     minimum = "2.0"
+    
+    # We already have a different VirusTotal module, this is duplicated.
+    enabled = False
 
     av_whitelist = [
         "Kingsoft",
